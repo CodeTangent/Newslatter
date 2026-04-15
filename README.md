@@ -1,53 +1,97 @@
-# Newsletter Automatizada de Notícias de TI
+# 📰 Automated Tech Newsletter (Python + .NET + Hangfire)
 
-## Visão Geral
-Este projeto tem como objetivo criar uma **newsletter automatizada** que reúne notícias de tecnologia da informação, realiza tradução quando necessário e distribui para assinantes. O sistema é híbrido, utilizando **Python** para scraping e processamento de notícias, **C#** para orquestração via API e **SQL Server + Hangfire** para persistência e agendamento de tarefas.
+## 🚀 Descrição
 
-O projeto ainda está em construção, mas a arquitetura já foi definida.
+Sistema automatizado para coleta, processamento e distribuição de notícias de tecnologia, utilizando uma arquitetura multi-stack com Python, .NET e SQL Server.
 
-## Funcionalidades Principais
-- Scraping de sites de notícias de TI utilizando Python  
-- Processamento de conteúdo, incluindo tokenização com SOAP4  
-- Tradução automatizada (em implementação)  
-- API em C# para receber dados do Python e gerenciar o envio de notícias  
-- Persistência em SQL Server, com Hangfire para agendamento de tarefas periódicas  
-- Estrutura modular para facilitar futuras integrações e expansão  
+---
 
-## Estrutura do Projeto
-A estrutura do projeto foi organizada para separar responsabilidades e facilitar manutenção:
+## 🧠 Problema resolvido
 
-| Pasta / Arquivo               | Descrição                                                                                  |
-|-------------------------------|-------------------------------------------------------------------------------------------|
-| `PythonScraper/`              | Código Python responsável por scraping, tokenização e tradução de notícias                 |
-| `CSharpAPI/`                  | Projeto C# que expõe a API para receber dados do Python e gerenciar envio                  |
-| `Database/`                   | Scripts de criação e manutenção do banco SQL Server                                        |
-| `Hangfire/`                   | Configuração de agendamento de tarefas periódicas no SQL Server                             |
-| `Website/`                    | Site básico do projeto, permitindo visualização das notícias coletadas                     |
-| `README.md`                   | Documento explicativo sobre o projeto e sua estrutura                                      |
+Automatizar o processo de coleta e distribuição de conteúdo, eliminando a necessidade de curadoria manual de notícias.
 
-> Observação: O projeto está em desenvolvimento, portanto algumas funcionalidades, como tradução automática, ainda não estão concluídas.
+---
 
-## Conceitos Aplicados
-- Python para scraping e processamento de dados  
-- Tokenização de conteúdo utilizando SOAP4  
-- C# e Web API para orquestração e integração entre sistemas  
-- SQL Server para armazenamento de notícias  
-- Hangfire para agendamento de tarefas recorrentes  
-- Arquitetura modular e integração entre múltiplas tecnologias  
+## 🛠 Tecnologias
 
-## Como Funciona (Atualmente)
-1. Python realiza scraping em sites de notícias de TI e gera dados estruturados.  
-2. Conteúdo é processado com tokenização SOAP4 (pré-tradução).  
-3. API em C# recebe os dados via requisições e armazena no banco SQL Server.  
-4. Hangfire será utilizado para agendar o envio periódico da newsletter.  
-5. Futuramente, será implementada a tradução automática e envio final aos assinantes.
+* Python (web scraping e processamento)
+* C# / .NET (Web API)
+* SQL Server (persistência)
+* Hangfire (agendamento de tarefas)
 
-## Status do Projeto
-- Site básico funcionando  
-- Scraping e tokenização implementados  
-- API C# criada, mas integração completa ainda em desenvolvimento  
-- Tradução automática ainda não implementada  
-- Sistema em construção, arquitetura já definida para futuras melhorias  
+---
 
-## Observações
-Este projeto demonstra habilidades em **Python, C#, SQL Server e integração de múltiplas tecnologias**, além de conceitos de scraping, processamento de linguagem e agendamento de tarefas. Serve como base para desenvolvimento de um sistema de newsletter profissional e escalável.
+## ⚙️ Arquitetura
+
+```text
+Scraper (Python)
+        ↓
+Processamento de Conteúdo
+        ↓
+API (.NET)
+        ↓
+Banco de Dados (SQL Server)
+        ↓
+Hangfire (Jobs agendados)
+        ↓
+Distribuição de conteúdo
+```
+
+---
+
+## 🔌 Como funciona
+
+* Scripts em Python coletam notícias de fontes externas
+* Os dados são processados e estruturados
+* A API em .NET recebe e armazena os dados
+* Hangfire gerencia tarefas recorrentes (coleta e envio)
+* O sistema prepara o conteúdo para distribuição automatizada
+
+---
+
+## ⚙️ Funcionalidades
+
+* Coleta automatizada de notícias
+* Processamento e estruturação de conteúdo
+* Integração entre Python e API REST
+* Persistência em banco relacional
+* Agendamento de tarefas com Hangfire
+
+---
+
+## ▶️ Como executar (parcial)
+
+```bash id="l2uv6y"
+# Backend .NET
+dotnet run
+
+# Python (scraper)
+python scraper.py
+```
+
+---
+
+## 📊 Status do projeto
+
+* Pipeline de coleta implementado
+* API criada e funcional
+* Integração parcial entre serviços
+* Agendamento com Hangfire configurado
+* Sistema em evolução
+
+---
+
+## 🎯 Objetivo do projeto
+
+Demonstrar a construção de um pipeline de dados distribuído, integrando múltiplas tecnologias para automação de tarefas.
+
+---
+
+## 📈 Melhorias futuras
+
+* Sistema de envio de newsletter (email)
+* Dashboard de administração
+* Filtros inteligentes de conteúdo
+* Deploy em cloud (Azure / AWS)
+
+---
